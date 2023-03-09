@@ -1,11 +1,11 @@
-import { TbTruckLoading } from 'react-icons/fa'
-import './Cartwidget.scss'
+import { FaCartPlus } from 'react-icons/fa'
+import './CartWidget.scss'
 
 const CartWidget = ()=> {
 
     return (
         <div className='cart-widget'>
-            <TbTruckLoading className='cart-icon'/>
+            <FaCartPlus className='cart-icon'/>
             <span>0</span>
         </div>
     )

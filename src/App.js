@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
       <Navbar />
-      <ItemlistContainer greeting={"Ingresa para registarte"}/>
+      <ItemlistContainer greeting={"Ingresa para Registarte"}/>
       
     </div> 
   );
