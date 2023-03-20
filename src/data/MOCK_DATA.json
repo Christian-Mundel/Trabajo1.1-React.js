@@ -5,6 +5,8 @@
         "description": "Lorem ipsum...",
         "price": 1500,
         "img": "http://dummyimage.com/200x200.png/5fa2dd/ffffff"
+        "category": "modulo",
+        "stock": 2
     },
     {
         "id": 2,
@@ -12,6 +14,8 @@
         "description": "Lorem ipsum...",
         "price": 2500,
         "img": "http://dummyimage.com/200x200.png/5fa2dd/ffffff"
+        "category": "modulo",
+        "stock": 2
     },
     {
         "id": 3,
@@ -19,6 +23,8 @@
         "description": "Lorem ipsum...",
         "price": 3500,
         "img": "http://dummyimage.com/200x200.png/5fa2dd/ffffff"
+        "category": "placas de carga",
+        "stock": 1
     },
     {
         "id": 4,
@@ -26,6 +32,9 @@
         "description": "Lorem ipsum...",
         "price": 4500,
         "img": "http://dummyimage.com/200x200.png/5fa2dd/ffffff"
+        "category": "cargadores",
+        "stock": 2
+
     },
     {
         "id": 5,
@@ -33,6 +42,8 @@
         "description": "Lorem ipsum...",
         "price": 5500,
         "img": "http://dummyimage.com/200x200.png/5fa2dd/ffffff"
+        "category": "cargadores",
+        "stock": 2
     },
     {
         "id": 6,
@@ -40,5 +51,7 @@
         "description": "Lorem ipsum...",
         "price": 6500,
         "img": "http://dummyimage.com/200x200.png/5fa2dd/ffffff"
+        "category": "accesorios",
+        "stock": 2
     }
 ]

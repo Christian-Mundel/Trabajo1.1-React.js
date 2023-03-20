@@ -2,16 +2,16 @@
 .cart-widget {
     display:flex;
     align-items: center;
-    gap: 4px;
+    gap: 6px;
     cursor: pointer;
 
     .cart-icon {
         color: rgb(248, 240, 239);
-        font-size: 35px;
+        font-size: 50px;
     }
 
     span {
         color: beige;
-        font-size: 35px;
+        font-size: 50px;
     }
 }
