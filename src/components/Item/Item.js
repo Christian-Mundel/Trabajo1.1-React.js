@@ -1,4 +1,4 @@
-import { link } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 
 const Item = ( {item} ) => {
@@ -9,7 +9,7 @@ const Item = ( {item} ) => {
             <img src={item.img}/>
             <p>Precio: ${item.price}</p>
             <p><small>Categoría: {item.category}</small></p>
-            <link to={`/detail/${item.id}`} className='btn btn-primary'>Ver mas</link>
+            <Link to={`/detail/${item.id}`} className='btn btn-primary'>Ver mas</Link>
         </div>
     )
 }

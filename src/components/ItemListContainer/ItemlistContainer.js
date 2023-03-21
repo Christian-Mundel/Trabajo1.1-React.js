@@ -17,8 +17,8 @@ useEffect(() => {
     pedirDatos()
         .then((res) => {
             if (categoryId) {
-                setProductos( res.filter((prod) => prod.category === categoryId) )
-            } else {
+                setProductos( res.filter((prod) => prod.category.includes(categoryId) ))
+            } else     {
                 setProductos(res)
             }
         })

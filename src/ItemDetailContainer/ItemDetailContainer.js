@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import { pedirDatos } from "../../helpers/pedirDatos"
-import ItemDetail from "../ItemDetail/ItemDetail"
+import { pedirDatos } from "../components/helpers/pedirDatos"
+
 
 
 
@@ -31,7 +31,7 @@ const ItemDetailContainer = () => {
             {
                 loading
                     ? <h2>Cargando...</h2>
-                    : <ItemDetail item={item}/>
+                    : <ItemDetailContainer item={item}/>
             }
         </div>
     )
