@@ -1,38 +1,31 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { pedirDatos } from "../components/helpers/pedirDatos"
-
+import ItemDetail from "../components/ItemDetail/ItemDetail"
 
 
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState(null)
-    const [loading, setLoading] = useState(true)
+
+    // const [loading, setLoading] = useState(true)
 
     const { itemId } = useParams()
 
-    console.log(item)
-    console.log(itemId)
-
     useEffect(() => {
-        setLoading(true)
+        // setLoading(true)
 
         pedirDatos()
             .then((res) => {
-                setItem( res.find((prod) => prod.id === Number(itemId)) )
+                let respuesta = res.find((prod) => prod.id === Number(itemId))
+                setItem(respuesta)
             })
-            .finally(() => {
-                setLoading(false)
-            })
+
     }, [itemId])
 
     return (
         <div className="container my-5">
-            {
-                loading
-                    ? <h2>Cargando...</h2>
-                    : <ItemDetailContainer item={item}/>
-            }
+            {item && <ItemDetail item={item}/>}
         </div>
     )
 }

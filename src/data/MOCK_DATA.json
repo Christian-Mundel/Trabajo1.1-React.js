@@ -1,25 +1,25 @@
 [
     {
         "id": 1,
-        "name": "Producto 1",
+        "name": "Modulos",
         "description": "Modulo Motorola G5 sin marco, Calidad Oled.",
         "price": 8500,
         "img": "../imgs/modulo-g5.jpg",
-        "category": "modulo",
+        "category": "modulos",
         "stock": 2
     },
     {
         "id": 2,
-        "name": "Producto 2",
+        "name": "Display",
         "description": "Modulo Iphone 7 Plus, Calidad Amoled.",
         "price": 12500,
         "img": "../imgs/modulo-iph7Plus.png",
-        "category": "modulo",
+        "category": "modulos",
         "stock": 2
     },
     {
         "id": 3,
-        "name": "Producto 3",
+        "name": "Partes Chicas",
         "description": "Placa De Carga Motorola G5, Copia",
         "price": 1500,
         "img": "../imgs/placa-g5.jpg",
@@ -28,7 +28,7 @@
     },
     {
         "id": 4,
-        "name": "Producto 4",
+        "name": "Accesorios",
         "description": "Cargador Aietch 2.0, cabezal y cable por separado",
         "price": 1300,
         "img": "../imgs/cargador-2.0.jpg",
@@ -38,7 +38,7 @@
     },
     {
         "id": 5,
-        "name": "Producto 5",
+        "name": "Cargadores Especiales",
         "description": "Cargador Ldnio Americano, cabezal y cable por separado",
         "price": 2500,
         "img": "../imgs/cargador-ldnio.jpg",
@@ -47,7 +47,7 @@
     },
     {
         "id": 6,
-        "name": "Producto 6",
+        "name": "Articulos / Ofertas",
         "description": "Luz Led, USB, varios colores.",
         "price": 500,
         "img": "../imgs/luz-led.png",
