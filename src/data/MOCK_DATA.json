@@ -6,7 +6,7 @@
         "price": 8500,
         "img": "../imgs/modulo-g5.jpg",
         "category": "modulos",
-        "stock": 2
+        "stock": 5
     },
     {
         "id": 2,
@@ -15,7 +15,7 @@
         "price": 12500,
         "img": "../imgs/modulo-iph7Plus.png",
         "category": "modulos",
-        "stock": 2
+        "stock": 5
     },
     {
         "id": 3,
@@ -24,7 +24,7 @@
         "price": 1500,
         "img": "../imgs/placa-g5.jpg",
         "category": "placas de carga",
-        "stock": 1
+        "stock": 5
     },
     {
         "id": 4,
@@ -33,7 +33,7 @@
         "price": 1300,
         "img": "../imgs/cargador-2.0.jpg",
         "category": "cargadores",
-        "stock": 2
+        "stock": 5
 
     },
     {
@@ -43,7 +43,7 @@
         "price": 2500,
         "img": "../imgs/cargador-ldnio.jpg",
         "category": "cargadores",
-        "stock": 2
+        "stock": 100
     },
     {
         "id": 6,
@@ -52,6 +52,6 @@
         "price": 500,
         "img": "../imgs/luz-led.png",
         "category": "accesorios",
-        "stock": 2
+        "stock": 200
     }
 ]

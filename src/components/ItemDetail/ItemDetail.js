@@ -1,6 +1,18 @@
+import { useState } from "react"
+import ItemCount from "../ItemCount/ItemCount"
+
 
 
 const ItemDetail = ({item}) => {
+    const [cantidad, setCantidad] = useState(1)
+
+    const handleAgregar = () => {
+        const newItem = {
+            ...item,
+            cantidad
+        }
+    }
+
 
     return (
         <div>
@@ -9,6 +21,13 @@ const ItemDetail = ({item}) => {
             <img src={item.img} alt={item.name}/>
             <p>{item.description}</p>
             <p>Precio: ${item.price}</p>
+
+            <ItemCount
+                max={item.stock}
+                cantidad={cantidad}
+                setCantidad={setCantidad}
+                agregar={handleAgregar}
+            />
         </div>
     )
 }
