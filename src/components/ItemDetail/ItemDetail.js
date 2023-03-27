@@ -4,7 +4,7 @@ import { CartContext } from "../../context/CartContext"
 import ItemCount from "../ItemCount/ItemCount"
 
 
-const ItemDetail = ({item}) => {
+const ItemDetail = ( {item} ) => {
     const { agregarAlCarrito, isInCart } = useContext(CartContext)
 
     const [cantidad, setCantidad] = useState(1)
@@ -29,7 +29,7 @@ const ItemDetail = ({item}) => {
 
             {
                 isInCart(item.id)
-                    ?   <link to="/cart" className="btn btn-success">Finalizar la compra</link>
+                    ?   <Link to="/cart" className="btn btn-success">Finalizar la compra</Link>
                     :    <ItemCount
                             max={item.stock}
                             cantidad={cantidad}
