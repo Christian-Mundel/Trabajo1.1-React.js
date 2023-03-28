@@ -31,13 +31,15 @@ useEffect(() => {
 }, [categoryId])
 
 return (
-    <div className="container my-5">
+    <div className='conFondo'>
+        <div className="container my-5">
 
-        {
-            loading
-                ? <h2>Cargando....</h2>
-                : <ItemList items={productos}/>
-        }
+            {
+                loading
+                    ? <h2>Cargando....</h2>
+                    : <ItemList items={productos}/>
+            }
+        </div>
     </div>
 )
 }

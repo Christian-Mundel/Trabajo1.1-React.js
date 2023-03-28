@@ -19,7 +19,7 @@ const ItemCount = ({ max, cantidad, setCantidad, agregar}) => {
 
             <br/>
 
-            <button onclick={agregar} className= "btn btn-success"> Agregar al carrito</button>
+            <button onClick={agregar} className= "btn btn-success"> Agregar al carrito</button>
         </div>
     )
 
