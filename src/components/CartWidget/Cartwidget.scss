@@ -4,6 +4,8 @@
     align-items: center;
     gap: 6px;
     cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
 
     .cart-icon {
         color: rgb(248, 240, 239);
@@ -13,5 +15,10 @@
     span {
         color: beige;
         font-size: 50px;
+    }
+
+    &-active {
+        visibility: visible;
+        opacity: 2;
     }
 }

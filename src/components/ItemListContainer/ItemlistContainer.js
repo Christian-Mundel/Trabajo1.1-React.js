@@ -3,6 +3,7 @@ import { pedirDatos } from '../helpers/pedirDatos'
 import ItemList from '../ItemList/ItemList'
 import './ItemListContainer.css'
 import { useParams } from 'react-router-dom'
+import Loader from '../Loader/Loader'
 
 const ItemListContainer = () => {
 
@@ -30,15 +31,15 @@ useEffect(() => {
         })
 }, [categoryId])
 
+
 return (
     <div className='conFondo'>
         <div className="container my-5">
-
-            {
-                loading
-                    ? <h2>Cargando....</h2>
-                    : <ItemList items={productos}/>
-            }
+        {
+            loading
+            ?   <Loader/>
+            :   <ItemList items={productos}/>
+        }    
         </div>
     </div>
 )

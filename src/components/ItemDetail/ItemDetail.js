@@ -25,10 +25,13 @@ const ItemDetail = ( {item} ) => {
             <hr/>
             <img src={item.img} alt={item.name}/>
             <p>{item.description}</p>
+            {item.stock <=2 && <p><strong>Restan solo {item.stock} unidades!!!</strong></p>}
             <p>Precio: ${item.price}</p>
 
             {
-                isInCart(item.id)
+                item.stock === 0
+                ?   <h4>Stock insuficiente</h4>
+                :   isInCart(item.id)
                     ?   <Link to="/cart" className="btn btn-success">Finalizar la compra</Link>
                     :    <ItemCount
                             max={item.stock}

@@ -13,9 +13,20 @@ const ItemCount = ({ max, cantidad, setCantidad, agregar}) => {
 
     return (
         <div>
-            <button onClick={handleRestar} className="btn btn-outline-primary">-</button>
+            <button onClick={handleRestar} 
+            className={cantidad === 1 ? "btn btn-outline-dark" : "btn btn-outline-primary" }
+            >
+                -
+            </button>
+            
             <span className="mx-3">{cantidad}</span> 
-            <button onClick={handleSumar} className="btn btn-outline-primary">+</button>
+            
+            <button 
+                onClick={handleSumar} 
+                className={cantidad === max ? "btn btn-outline-dark" : "btn btn-outline-primary" }
+                >
+                    +
+                    </button>
 
             <br/>
 

@@ -7,6 +7,7 @@ import ItemDetailContainer from './ItemDetailContainer/ItemDetailContainer';
 import { CartProvider } from './context/CartContext';
 import Cart from "./components/Cart/Cart";
 import './index.css'
+import LoginScreen from './components/LoginScreen/LoginScreen';
 
 
 
@@ -22,7 +23,8 @@ function App() {
           <Route path='/' element={ <ItemListContainer /> }/>
           <Route path='/productos/:categoryId' element={ <ItemListContainer /> }/>
           <Route path='/cart' element={ <Cart /> }/>
-          <Route path='/detail/:itemId' element={ <ItemDetailContainer /> } />
+          <Route path='/detail/:itemId' element={ <ItemDetailContainer /> }/>
+          <Route path='/login' element={ <LoginScreen /> }/>
           <Route path='/nosotros' element={ <Nosotros /> }/>
           <Route path='*' element={ <Navigate to={"/"}/> }/>
         </Routes>

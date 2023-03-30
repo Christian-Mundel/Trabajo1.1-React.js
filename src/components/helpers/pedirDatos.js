@@ -7,6 +7,6 @@ export const pedirDatos = () => {
 
                 resolve(MOCK_DATA)
 
-        }, 1000)
+        }, 2000)
     })
 }
