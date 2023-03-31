@@ -1,38 +1,22 @@
-import { Navbar } from './components/Navbar/Navbar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import Nosotros from './components/Nosotros/Nosotros';
-import ItemDetailContainer from './ItemDetailContainer/ItemDetailContainer';
 import { CartProvider } from './context/CartContext';
-import Cart from "./components/Cart/Cart";
 import './index.css'
-import LoginScreen from './components/LoginScreen/LoginScreen';
+import { LoginProvider } from './context/LoginContext';
+import AppRouter from './routes/AppRouter';
+
 
 
 
 function App() {
 
   return (
-    <CartProvider>
-      <BrowserRouter>
-        <Navbar />
-        <div className='conFondo'>
+    <LoginProvider>   
+      <CartProvider>
+        <AppRouter/>
 
-        <Routes>
-          <Route path='/' element={ <ItemListContainer /> }/>
-          <Route path='/productos/:categoryId' element={ <ItemListContainer /> }/>
-          <Route path='/cart' element={ <Cart /> }/>
-          <Route path='/detail/:itemId' element={ <ItemDetailContainer /> }/>
-          <Route path='/nosotros' element={ <Nosotros /> }/>
-          <Route path='/login' element={ <LoginScreen /> }/>
-          <Route path='*' element={ <Navigate to={"/"}/> }/>
-        </Routes>
-
-        {}
-        </div>
-      </BrowserRouter>
-    </CartProvider>
+        <div className='conFondo'></div>
+        </CartProvider>
+    </LoginProvider>
 
   );
 }

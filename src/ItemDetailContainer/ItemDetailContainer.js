@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { pedirDatos } from "../components/helpers/pedirDatos"
-import ItemDetail from "../components/ItemDetail/ItemDetail"
-
+import ItemDetail from "../ItemDetailContainer/ItemDetailContainer"
 
 
 const ItemDetailContainer = () => {
