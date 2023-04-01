@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react'
-import { pedirDatos } from '../helpers/pedirDatos'
 import ItemList from '../ItemList/ItemList'
 import './ItemListContainer.css'
 import { useParams } from 'react-router-dom'
 import Loader from '../Loader/Loader'
+import { collection, getDocs, query, where } from 'firebase/firestore'
+import { db } from '../../fiberbase/config'
+
 
 const ItemListContainer = () => {
 
@@ -15,20 +17,22 @@ const ItemListContainer = () => {
 useEffect(() => {
     setLoading(true)
 
-    pedirDatos()
-        .then((res) => {
-            if (categoryId) {
-                setProductos( res.filter((prod) => prod.category.includes(categoryId) ))
-            } else     {
-                setProductos(res)
-            }
+    const productosRef = collection(db, "productos")
+    const q = categoryId
+                ? query(productosRef, where("category", "==", categoryId))
+                : productosRef
+
+    getDocs(q)
+        .them((res) => {
+            setProductos( res.docs.map((doc) => {
+                return {
+                    id: doc.id,
+                    ...doc.data()
+                }
+            }))
         })
-        .catch((error) => {
-        
-        })
-        .finally(() => {
-            setLoading(false)
-        })
+        .finally(() => setLoading(false))
+    
 }, [categoryId])
 
 

@@ -26,7 +26,7 @@ export const Navbar = ({red}) => {
             </div>
 
             <div className='user'>
-                <h6>Bienvenidos: {user.email}</h6>
+                <h6>Hola: {user.email}</h6>
                 <button className='btn btn-danger' onClick={logout}>logout</button>
             </div>
         </header>

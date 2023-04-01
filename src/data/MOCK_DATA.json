@@ -4,7 +4,7 @@
         "name": "Modulos",
         "description": "Modulo Motorola G5 sin marco, Calidad Oled.",
         "price": 8500,
-        "img": "../imgs/modulo-g5.jpg",
+        "img": "../imgs/placa-g5.jpg",
         "category": "modulos",
         "stock": 5
     },
