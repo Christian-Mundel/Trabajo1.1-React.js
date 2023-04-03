@@ -11,12 +11,11 @@ const ItemDetailContainer = () => {
     const { itemId } = useParams()
 
     useEffect(() => {
-        // setLoading(true)
 
         const docRef = doc( db, "productos", itemId)
 
         getDoc(docRef)
-        .them((doc) => {
+        .then((doc) => {
             setItem({
                 id: doc.id,
                 ...doc.data()

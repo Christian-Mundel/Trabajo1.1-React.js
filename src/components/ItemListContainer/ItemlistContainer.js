@@ -11,7 +11,6 @@ const ItemListContainer = () => {
 
     const [productos, setProductos] = useState([])
     const [loading, setLoading] = useState(true)
-
     const { categoryId } = useParams()
 
 useEffect(() => {
@@ -23,7 +22,7 @@ useEffect(() => {
                 : productosRef
 
     getDocs(q)
-        .them((res) => {
+        .then((res) => {
             setProductos( res.docs.map((doc) => {
                 return {
                     id: doc.id,
@@ -41,8 +40,8 @@ return (
         <div className="container my-5">
         {
             loading
-            ?   <Loader/>
-            :   <ItemList items={productos}/>
+            ?   <Loader />
+            :   <ItemList items={productos} />
         }    
         </div>
     </div>
