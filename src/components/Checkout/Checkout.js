@@ -1,7 +1,7 @@
 import { useContext, useState } from "react"
 import { CartContext } from "../../context/CartContext"
 import { Navigate } from "react-router-dom"
-import { writeBatch, collection, where, documentId, updateDoc, addDoc, doc, getDocs, query} from "firebase/firestore"
+import { writeBatch, collection, where, documentId, addDoc, doc, getDocs, query} from "firebase/firestore"
 import { db } from "../../fiberbase/config"
 
 
@@ -38,7 +38,7 @@ const Checkout = () => {
             return
         }
         if (values.direccion.length < 2) {
-            alert("El direccion es corto")
+            alert("El direccion es corta")
             return
         }
         if (values.email.length < 5) {
@@ -60,14 +60,14 @@ const Checkout = () => {
         const batch = writeBatch(db)
 
         const ordersRef = collection(db, "orders")
-        const produtosRef = collection(db, "productos")
-        const q = query(produtosRef, where(documentId(), "in", cart.map(item => item.id)))
+        const productosRef = collection(db, "productos")
+        const q = query(productosRef, where(documentId(), "in", cart.map(item => item.id)))
 
         const outOfStock = []
 
         const productos = await getDocs(q)
 
-        productos.doc.forEach((doc) => {
+        productos.docs.forEach((doc) => {
             const item = cart.find((prod) => prod.id === doc.id)
 
             if (doc.data().stock >= item.cantidad) {
